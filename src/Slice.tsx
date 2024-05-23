@@ -20,7 +20,7 @@ export const Vert_Slice = ({
     const temp_verts = [];
     for (let i = 0; i < verts.length; i += 3) {
       //   if (Math.round(verts[i + 1]) == Math.round(y_pos)) {
-      if (isClose(verts[i + 1], y_pos, 0.5)) {
+      if (isClose(verts[i + 1], y_pos, 0.25)) {
         temp_verts.push(verts[i] * 10);
         // temp_verts.push(verts[i + 1]);
         temp_verts.push(verts[i + 2] * 10);
@@ -30,7 +30,7 @@ export const Vert_Slice = ({
   }, [verts, y_pos]);
   return (
     <Group x={x} y={y}>
-      <Line points={new_verts} stroke="red" />
+      <Line points={new_verts} stroke="red" fill="green" closed />
     </Group>
   );
 };

@@ -74,9 +74,10 @@ function App() {
       <input type="file" onChange={file_handler} />
       <input
         type="range"
-        min={-10}
-        max={10}
+        min={-15}
+        max={15}
         step={0.01}
+        width={200}
         onChange={(evt) => {
           setYPos(Number(evt.target.value));
         }}
