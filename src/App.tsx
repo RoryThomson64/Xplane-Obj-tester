@@ -20,11 +20,6 @@ function App() {
       arr.push(verts[i]);
     }
     temp.push(arr);
-    console.log(arr);
-    console.log(verts.length);
-
-    console.table(verts);
-    console.table(temp);
   }, [verts]);
 
   useEffect(() => {
@@ -46,6 +41,7 @@ function App() {
             while (char_count < 3) {
               if (bytes[i + ind] != 9) {
                 num_char += String.fromCharCode(bytes[i + ind]);
+
                 ind += 1;
               } else {
                 temp_verts.push(Number(num_char));
